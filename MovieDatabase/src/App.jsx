@@ -8,13 +8,13 @@ import Register from "./pages/Register";
 import Movies from "./pages/Movies";
 import MyList from "./pages/MyList";
 import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <>
+    <div className="app">
       <BrowserRouter>
-      <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
