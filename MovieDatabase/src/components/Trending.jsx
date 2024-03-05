@@ -4,9 +4,9 @@ import '../css/Home.css'
 
 export const Trending = () => {
   return (
-    <div className='trending'>
-      <p className="title-body">Trending</p>
-      <div className="trending-list">
+    <div className='container trending'>
+      <p className='title-body'>Trending</p>
+      <div className='trending-list'>
         <Movie />
         <Movie />
         <Movie />

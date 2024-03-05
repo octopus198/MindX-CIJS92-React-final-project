@@ -3,8 +3,8 @@ import { Trailer } from './Trailer'
 
 export const LatestTrailers = () => {
   return (
-    <div className="latest-trailer">
-      <p className="title-body">Latest Trailers</p>
+    <div className='container latest-trailer'>
+      <p className='title-body'>Latest Trailers</p>
       <div className='list-trailers'>
         <Trailer />
         <Trailer />
