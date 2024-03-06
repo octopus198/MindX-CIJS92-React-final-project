@@ -2,7 +2,7 @@ import React from 'react'
 import { IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router-dom'
 
-export const Header = () => {
+const Header = () => {
     return (
         <div className='container-fluid header-container-fluid'>
             <div className='container header'>
@@ -24,3 +24,6 @@ export const Header = () => {
         </div>
     )
 }
+
+
+export default Header;

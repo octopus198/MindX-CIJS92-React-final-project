@@ -7,9 +7,10 @@ import Movies from "./pages/Movies";
 import MyList from "./pages/MyList";
 import NotFound from "./pages/NotFound";
 import { Home } from "./pages/Home";
-import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Detail } from "./components/Detail";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/Header";
 
 function App() {
   return (
