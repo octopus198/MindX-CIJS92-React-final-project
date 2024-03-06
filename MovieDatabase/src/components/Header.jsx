@@ -1,36 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import React from 'react'
+import { IoSearch } from 'react-icons/io5';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-  return (
-    <>
-      <div className="header-nav">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/movies"}>Movies</Link>
-        <Link to={"/tvshows"}>TV Shows</Link>
-        <Link to={"/mylist"}>My List</Link>
-      </div>
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home">The Movie Database</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#movies">Movies</Nav.Link>
-              <Nav.Link href="#tvshows">TV Shows</Nav.Link>
-              <Nav.Link href="#mylist">My List</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">User</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
-  );
-};
+    return (
+        <div className='container-fluid header-container-fluid'>
+            <div className='container header'>
+                <div className='header-left'>
+                    <div className='logo'>
+                        <Link to={'/'}><img src='https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg' alt='TMDB logo' /></Link>
+                    </div>
+                    <div className='tab'><Link to={'/movies'}>Movies</Link></div>
+                    <div className='tab'><Link to={'/tvshows'}>TV Shows</Link></div>
+                    <div className='tab'><Link to={'/mylist'}>My List</Link></div>
+                </div>
+                <div className='header-right'>
+                    <div className='language'></div>
+                    <div className='login'>Login</div>
+                    <div className='register'>Join TMDB</div>
+                    <div className='search'><IoSearch className='search-logo' /></div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 
 export default Header;
