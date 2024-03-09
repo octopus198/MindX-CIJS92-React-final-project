@@ -2,9 +2,10 @@ import React from 'react'
 import '../css/Detail.css'
 import { FaBookmark } from 'react-icons/fa';
 import { FaList } from 'react-icons/fa';
-import { Cast } from './Cast';
+import { Cast } from '../components/Cast';
 
-export const Detail = () => {
+export const Detail = (data) => {
+  console.log(data)
   return (
     <div className='detail'>
       <div className="container-fluid info-container">

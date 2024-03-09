@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/Home.css'
 
 export const Banner = () => {
+    
     return (
         <div className='container banner'>
             <div className='introduction'>

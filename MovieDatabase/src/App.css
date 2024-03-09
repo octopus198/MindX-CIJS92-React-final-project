@@ -6,7 +6,7 @@
 
 .header-container-fluid {
   background-color: #021E34;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1;
 }
@@ -50,9 +50,6 @@
   color: deepskyblue;
 }
 
-.body {
-  padding: 55px 115px 0;
-}
 
 .footer {
   display: flex;
