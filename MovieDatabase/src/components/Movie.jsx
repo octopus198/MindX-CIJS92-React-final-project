@@ -3,7 +3,7 @@ import "../css/Home.css"
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-export const Movie = ({url}) => {
+export const Movie = ({ url }) => {
   const [listMovie, setListMovie] = useState([]);
   const options = {
     method: 'GET',
@@ -15,7 +15,6 @@ export const Movie = ({url}) => {
   useEffect(() => {
     const fetchMovieData = async () => {
       const data = await axios.get(url, options)
-      console.log(data.data.results)
       setListMovie([...data.data.results]);
       return data;
     }
@@ -25,7 +24,7 @@ export const Movie = ({url}) => {
     <div className='movie-list'>
       {
         listMovie.length > 0 && listMovie.map(item => {
-          return <Link to={`/:${item.title}`} key={item.id} data={item}><div className='movie'><img src={`https://media.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`} alt='Movie img' className='img-movie' /><div className="title-movie"><p className='name-movie'>{item.title}</p><p className='time-movie'>{item.release_date}</p></div></div></Link>
+          return <Link to={`/:${item.id}`} key={item.id}><div className='movie'><img src={`https://media.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`} alt='Movie img' className='img-movie' /><div className="title-movie"><p className='name-movie'>{item.title}</p><p className='time-movie'>{item.release_date}</p></div></div></Link>
         })
       }
     </div>

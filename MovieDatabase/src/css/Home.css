@@ -10,12 +10,20 @@
     padding: 0 40px;
 }
 
+.container p{
+    margin: 0;
+}
+
+.introduction{
+    margin-bottom: 30px;
+}
+
 .title-banner {
     font-size: 48px;
 }
 
 .desc-banner {
-    font-size: 32px;
+    font-size: 25px;
 }
 
 .search-banner {
@@ -83,7 +91,7 @@
     margin-bottom: 30px;
 }
 
-.title-movie p{
+p{
     margin: 0;
 }
 
