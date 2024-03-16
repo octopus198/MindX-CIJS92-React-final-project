@@ -25,11 +25,20 @@
     gap: 20px;
 }
 
-.function button {
+.btn-list {
     padding: 10px 12px;
     border-radius: 20px;
     color: #fff;
     background-color: #021E34;
+}
+
+.btn-trailer{
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px
 }
 
 .name-info {
