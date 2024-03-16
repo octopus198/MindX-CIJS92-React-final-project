@@ -50,9 +50,6 @@
   color: deepskyblue;
 }
 
-.body {
-  padding: 55px 115px 0;
-}
 
 .footer {
   display: flex;
@@ -62,20 +59,9 @@
   padding: 40px;
 }
 
-.header-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
 .logo-img img {
   width: 130px;
   height: 94px;
-}
-
-.header-nav a {
-  text-decoration: none;
 }
 
 .movies-heading {
@@ -144,4 +130,18 @@
 .not-found {
   display: grid;
   place-items: center;
+}
+
+.overview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  max-height: 4.5em; 
+}
+
+.movie-card-image {
+  object-fit: cover;
+  height: 280px;
 }
