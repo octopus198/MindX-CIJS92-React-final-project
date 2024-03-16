@@ -13,19 +13,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/tvshows" element={<TVShows />} />
-          <Route path="/mylist" element={<MyList />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/detail" element={<Detail />} />
+        <Route path="/tvshows" element={<TVShows />} />
+        <Route path="/mylist" element={<MyList />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
