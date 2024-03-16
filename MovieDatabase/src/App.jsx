@@ -8,7 +8,6 @@ import MyList from "./pages/MyList";
 import NotFound from "./pages/NotFound";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
-import Header from "./components/Header";
 import { Detail } from "./pages/Detail";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,7 +19,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/detail" element={<Detail />} />
         <Route path="/tvshows" element={<TVShows />} />
         <Route path="/mylist" element={<MyList />} />
         <Route path="/:id" element={<Detail />} />

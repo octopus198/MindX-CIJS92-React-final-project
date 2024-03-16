@@ -16,6 +16,7 @@ export const Detail = () => {
   const [listDetail, setListDetail] = useState([]);
   const [listCast, setListCast] = useState([]);
   const [listTrailer, setListTrailer] = useState([]);
+  let [trailerActive, setTrailerActive] = useState(false);
   const options = {
     method: 'GET',
     headers: {
@@ -32,20 +33,17 @@ export const Detail = () => {
       setListDetail(dataDetail.data);
       setListCast(dataCast.data.cast);
       setListTrailer(dataTrailer.data.results);
-      const movieTitle = (toString(listDetail.id) + listDetail.title); //replace(/[^a-zA-Z ]/g, '') -> Loại bỏ ký tự không phải chữ và dấu cách, replace(/\s+/g, '-') -> Thay thế dấu cách bằng dấu -
-      console.log(movieTitle)
       return [dataDetail, dataCast, dataTrailer];
     }
     fetchData();
   }, []);
 
-  // console.log(listTrailer)
-  // console.log(listDetail)
+  const movieTitle = listDetail.title ? listDetail.title.toLowerCase().replace(/[^a-zA-Z ]/g, '').replace(/\s+/g, '-') : ""; //replace(/[^a-zA-Z ]/g, '') -> Loại bỏ ký tự không phải chữ và dấu cách, replace(/\s+/g, '-') -> Thay thế dấu cách bằng dấu -
+  // let trailerPosition = listTrailer.length();
+  // console.log(trailerPosition )
 
   const handleTrailer = () => {
-    return (
-      <iframe src="" height="200" width="300" title="Trailer"></iframe>
-    )
+    setTrailerActive(!trailerActive);
   }
   return (
     <div className='detail'>
@@ -58,7 +56,23 @@ export const Detail = () => {
             <div className='function'>
               <button className='btn-list'><FaBookmark /></button>
               <button className='btn-list'><FaList /></button>
-              <button className='btn-trailer' onClick={handleTrailer}><FaPlay /> Play trailer</button>
+              <div className='trailer-video'>
+                <button className='btn-trailer' onClick={handleTrailer}><FaPlay /> Play trailer</button>
+                {trailerActive && (
+                  <div className="show-video">
+                    <button onClick={handleTrailer}>X</button>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://api.themoviedb.org/3/movie/${listDetail.id}-${movieTitle}#play=`}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                )}
+              </div>
             </div>
             <div className='overview'>
               <h3>Overview</h3>
