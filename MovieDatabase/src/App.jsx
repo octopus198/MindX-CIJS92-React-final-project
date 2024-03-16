@@ -1,15 +1,16 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
 import TVShows from "./pages/TVShows";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Movies from "./pages/Movies";
 import MyList from "./pages/MyList";
 import NotFound from "./pages/NotFound";
-import Header from "./components/Header";
+import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer";
+import { Detail } from "./components/Detail";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/Header";
 
 function App() {
   return (
