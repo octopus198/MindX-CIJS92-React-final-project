@@ -2,19 +2,18 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import React from "react";
 
-const MovieCard = () => {
+const MovieCard = ({ title, overview, img }) => {
+  const imageURL = `https://image.tmdb.org/t/p/w500/${img}`;
   return (
     <div>
-      <Card >
-      {/* style={{ width: "18rem" }} */}
-        <Card.Img variant="top" src="https://m.media-amazon.com/images/I/71BgdzmFDAL._AC_UF894,1000_QL80_.jpg" />
+      <Card>
+        <Card.Img variant="top" src={imageURL} className="movie-card-image" />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <Card.Title>{title}</Card.Title>
+          <Card.Text className="overview">
+            {overview}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">See more</Button>
         </Card.Body>
       </Card>
     </div>

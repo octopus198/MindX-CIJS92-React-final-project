@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import CarouselSlider from "../components/CarouselSlider";
+import { Footer } from "../components/Footer";
 
 const MyList = () => {
   return (
@@ -15,6 +16,7 @@ const MyList = () => {
         <h2>Classic movies</h2>
         <CarouselSlider></CarouselSlider>
       </div>
+      <Footer />
     </>
   );
 };

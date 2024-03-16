@@ -4,6 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import MovieCard from "../components/MovieCard";
 import PaginationCard from "../components/PaginationCard";
 import Header from "../components/Header";
+import { Footer } from "../components/Footer";
 
 const TVShows = () => {
   return (
@@ -125,6 +126,7 @@ const TVShows = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

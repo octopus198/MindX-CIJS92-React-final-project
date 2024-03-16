@@ -24,7 +24,6 @@ function App() {
         <Route path="/:id" element={<Detail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
