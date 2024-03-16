@@ -8,9 +8,8 @@ import MyList from "./pages/MyList";
 import NotFound from "./pages/NotFound";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
-import { Detail } from "./components/Detail";
+import { Detail } from "./pages/Detail";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Header";
 
 function App() {
   return (
@@ -20,9 +19,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/detail" element={<Detail />} />
         <Route path="/tvshows" element={<TVShows />} />
         <Route path="/mylist" element={<MyList />} />
+        <Route path="/:id" element={<Detail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

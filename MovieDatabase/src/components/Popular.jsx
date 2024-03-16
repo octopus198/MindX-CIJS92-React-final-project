@@ -6,12 +6,7 @@ export const Popular = () => {
     <div className='container popular'>
       <div className='title-body'>What's popular</div>
       <div className='popular-list'>
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
+        <Movie url={'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1'}/>
       </div>
     </div>
   )
